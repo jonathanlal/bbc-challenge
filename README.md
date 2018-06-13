@@ -24,3 +24,14 @@ pip install json
 ### Then to run:
 Navigate to the directory `bbc-challenge` and type: <br/>
 `python main.py`
+
+---
+
+#### Note: In Windows command prompt you may see this error (or something like it):
+> ERROR: "'charmap' codec can't encode character '\\u2013' in position 110906: character maps to <undefined>"<br/>
+
+To fix that just type in the following:
+```
+chcp 65001
+set PYTHONIOENCODING=utf-8
+```
