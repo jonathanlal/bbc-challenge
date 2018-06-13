@@ -1,7 +1,6 @@
 import sys
 import requests # pip install requests
-import json
-import asciiArt
+
 
 def processInput():
     buffer = []

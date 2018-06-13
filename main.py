@@ -1,13 +1,13 @@
 import sys
 import requests # pip install requests
 import json
-import asciiArt
 
 
 #after typing in all the urls via stdin, user can type 'done' to start processing the urls
 list = [] #needs to be global so we can add each dictionary to the list and access it in the additionalRequirement
 def processInput():
-    asciiArt.makeArt('BBC Challenge','yellow','on_red','doom','Seperate each URL by a new line.\nType \'done\' on a new line when you are done!\n')
+    print("\n<---------------BBC Challenge--------------->\n")
+    print("Seperate each URL by a new line.\nType \'done\' on a new line when you are done!\n")
     buffer = []
     while True:
         line = sys.stdin.readline().rstrip('\n')
@@ -40,7 +40,7 @@ def processUrl(url):
 
 #for each unique status code in list, create a dictionary (of 'status_code' and 'Number_of_responses') and add it to a new list, else increment dictionary value for key 'Number_of_responses'
 def additionalRequirement():
-    asciiArt.makeArt(None,'red','on_grey','doom','<----Additional Requirement---->\n')
+    print("<----Additional Requirement---->")
     list2 = []
     #for each dictionary in list
     for i in range(0,len(list)):
