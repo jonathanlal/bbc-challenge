@@ -10,6 +10,7 @@ def makeArt(text,textColor,background,font,intro):
     from termcolor import cprint
     from pyfiglet import figlet_format
     print('\n')
-    cprint(figlet_format(text, font=font),textColor, background, attrs=['concealed'])
+    if text is not None:
+        cprint(figlet_format(text, font=font),textColor, background, attrs=['concealed'])
     if intro is not None:
         cprint(intro, textColor, background)
